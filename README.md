@@ -12,6 +12,14 @@ Kuva aliprosessista:
   - Aliprosessi hyödyntää Frendsin sisäistä Shared State -välimuistia, joka on käytettävissä Frends 5.4 -versiosta lähtien.
 - Taski Frends.Community.Email.EmailTask.SendEmail on asennettu.
   - Jos käytössä on uudempi Frends.SMTP.SendEmail, voit vaihtoehtoisesti käyttöönoton yhteydessä muutta prosessin target framework:ksi .NET 6.0/8.0 ja käyttää sähköpostin lähetykseen SMTP.SendEmail -taskia.
+ 
+## Aliprosessin tarvitsemat ympäristömuuttujat
+Voit tarvittaessa hyödyntää olemassa olevia muuttujia. Oletuksena aliprosessi käyttää seuraavia muuttujia:
+  - #env.Reporting.EmailFrom = lähettäjän sähköpostiosoite
+  - #env.Reporting.EmailSenderName = lähettäjän nimi
+  - #env.Reporting.SmtpServer = SMTP-palvelimen osoite
+  - #env.Reporting.SmtpUsername = SMTP-käyttäjätunnus, jolla ei ole MFA käytössä
+  - #env.Reporting.SmtpPassword = SMTP-käyttäjätunnuksen salasana
 
 ## Parametrit:
 - Recipients: vastaanottajat, puolipistein eroteltu lista
@@ -36,15 +44,4 @@ Mukana tässä hakemistossa on esimerkkiprosessi "**ESIMERKKIPROSESSI Demo Virhe
 
 # Asennus
 
-1. Lataa prosessitiedostot työasemalle.
-2. Asenna ensin aliprosessi tiedostosta "ALIPROSESSI Virheenhallinta ja raportointi v2.json"
-  1. Navigoi kehitysympäristön Subprocesses -listanäkymään.
-  2. Klikkaa "Import" kuvaketta.
-  3. Frends avaa Import-popup-ikkunan, jossa saattaa olla varoitus esim. puuttuvasta taskista, esim. "The following task packages need to be added or updated before importing:
-Frends.Community.Email(2.5.2)"
-  4. Jos mitään sähköpostin lähetykseen sopivaa taskia ei ole asennettu Frends-tenantiin. Asenna ensin taski ja aloita asennusprosessi sitten uudestaan.
-  5. Varmista Import-ikkunan Create options -kohdasta, että valittuna on "Create new draft"
-  6. Jos aliprosessi "Virheenhallina ja raportointi ei tule näkyviin Subprocesses-listan alaosaan Drafts-kohtaan, lataa selaimessa Subprocesses -näkymä uudelleen.
-  7. Kun aliprosessi näkyy Drafts-listalla, avaa se editointitilaan klikkaamalla prosessin nimeä.
-  8. Aktivoi prosessin loppupäässä oleva "Send Email" -niminen taski.
-  9. Jos Frends-tenantiin asennetun taskin versio ei täsmää prosessitiedoston versioon tai jos Frends.Community.Email.EmailTask.SendEmail -taskia ei ole asennettu ollenkaan, "Send Email" täytyy konfiguroida uudelleen.
+Linkki interaktiiviseen aliprosessin importoimiseen ja sovittamiseen kohde-Frends-ympäristöön: [Aliprosessin asennus import-tiedostosta](https://app.storylane.io/share/pzxc3znytx5j)
