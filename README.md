@@ -1,4 +1,4 @@
-# Virheen-hallinta-ja-raportointi_V2
+# Virheenhallinta-ja-raportointi_V2
 
 Uudelleenkäytettävä aliprosessi virheiden hallintaan ja raportointiin, joka soveltuu käytettäväksi erityisesti sellaisten pääprosessien kanssa, joissa samoja virheitä toistuu säännöllisesti ja/tai tiheästi. Aliprosessin parametrien avulla voi joustavasti konfiguroida kuinka toistuvasta virheestä raportoidaan sähköpostilla.
 
