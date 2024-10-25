@@ -44,4 +44,4 @@ Mukana tässä hakemistossa on esimerkkiprosessi "**ESIMERKKIPROSESSI Demo Virhe
 
 # Asennus
 
-Linkki interaktiiviseen aliprosessin importoimiseen ja sovittamiseen kohde-Frends-ympäristöön: [Aliprosessin asennus import-tiedostosta](https://app.storylane.io/share/pzxc3znytx5j)
+Linkki interaktiiviseen esitykseen miten aliprosessi importoidaan ja sovitetaan kohde-Frends-ympäristöön: [Aliprosessin asennus import-tiedostosta](https://app.storylane.io/share/pzxc3znytx5j)
